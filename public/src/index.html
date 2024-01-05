@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+  </head>
+
+  <body>
+    <input type="text" name="name" id="name" />
+    <select id="gender">
+      <option value="">--</option>
+      <option value="male">M</option>
+      <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email" />
+    <input type="text" name="mobile" id="mobile" />
+    <hr />
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr />
+    <button onclick="showName()">NAME</button>
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showEmail()">EMAIL</button>
+    <button onclick="showMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+    <button onclick="resetDisplay()">RESET DISPLAY</button>
+    <script type="text/javascript">
+      function showName() {
+        let name = document.getElementById('name')
+        let tag1 = document.getElementById('dName')
+        tag1.textContent = 'NAME :' + name.value
+      }
+
+      function showGender() {
+        let gender = document.getElementById('gender')
+        let tag2 = document.getElementById('dGender')
+        tag2.textContent = 'GENDER : ' + gender.value
+      }
+
+      function showEmail() {
+        let EMAIL = document.getElementById('email')
+        let tag3 = document.getElementById('dEmail')
+        tag3.textContent = 'EMAIL :' + EMAIL.value
+      }
+
+      function showMobile() {
+        let number = document.getElementById('mobile')
+        let tag4 = document.getElementById('dMobile')
+        tag4.textContent = 'MOBILE :' + number.value
+      }
+
+      function resetForm() {
+        let name = document.getElementById('name')
+        let gender = document.getElementById('gender')
+        let EMAIL = document.getElementById('email')
+        let number = document.getElementById('mobile')
+        name.value = ''
+        gender.value = ''
+        EMAIL.value = ''
+        number.value = ''
+      }
+
+      function resetDisplay() {
+        let tag1 = document.getElementById('dName')
+        let tag2 = document.getElementById('dGender')
+        let tag3 = document.getElementById('dEmail')
+        let tag4 = document.getElementById('dMobile')
+
+        tag1.textContent = ''
+        tag2.textContent = ''
+        tag3.textContent = ''
+        tag4.textContent = ''
+      }
+    </script>
+  </body>
+</html>
